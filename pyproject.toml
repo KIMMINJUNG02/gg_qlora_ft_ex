@@ -32,6 +32,11 @@ dependencies = [
     "unsloth>=2026.6.9",
 ]
 
+[tool.uv]
+override-dependencies = [
+    "nvidia-cublas-cu12==12.9.1.4",
+]
+
 [tool.uv.sources]
 torch = [
     { index = "pytorch-cu128" },
@@ -47,3 +52,8 @@ torchaudio = [
 name = "pytorch-cu128"
 url = "https://download.pytorch.org/whl/cu128"
 explicit = true
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
